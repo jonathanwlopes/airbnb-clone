@@ -25,6 +25,7 @@ export const categories = [
     icon: TbBeach,
     description: "This property is close to the beach!",
   },
+  
   {
     label: "Windmills",
     icon: GiWindmill,
@@ -114,8 +115,6 @@ const Categories = () => {
   const params = useSearchParams()
   const category = params?.get("category")
   const pathname = usePathname()
-
-  console.log(pathname)
 
   const isMainPage = pathname === "/"
   if (!isMainPage) return null
