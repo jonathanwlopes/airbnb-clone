@@ -25,6 +25,9 @@ dependencies:
   bcrypt:
     specifier: ^5.1.0
     version: 5.1.0
+  date-fns:
+    specifier: ^2.29.3
+    version: 2.29.3
   eslint:
     specifier: 8.37.0
     version: 8.37.0
@@ -40,6 +43,9 @@ dependencies:
   next-auth:
     specifier: ^4.21.1
     version: 4.21.1(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
+  next-cloudinary:
+    specifier: ^4.3.0
+    version: 4.3.0(next@13.3.0)(react@18.2.0)
   postcss:
     specifier: 8.4.21
     version: 8.4.21
@@ -140,6 +146,29 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@cloudinary-util/url-loader@3.1.1:
+    resolution: {integrity: sha512-jR81afElp8GZJQrMHR9jW7ondDPKEsVD8LTSmFDTRZhMoPuRdljQNup8Tz4qOog7OxM+JS0+Gkn3j/fSmgEB8Q==}
+    dependencies:
+      '@cloudinary-util/util': 2.0.1
+      '@cloudinary/url-gen': 1.10.0
+    dev: false
+
+  /@cloudinary-util/util@2.0.1:
+    resolution: {integrity: sha512-d2imgUjYTLjv8ZhZPMAts/uPbMvIE71X4I/5hwdY/7vM4BuFQoJMSyq+h2pW1z1MyGG9BOWBm70vp082lSrbEQ==}
+    dev: false
+
+  /@cloudinary/transformation-builder-sdk@1.2.7:
+    resolution: {integrity: sha512-Q1fhw37BXXmN6/BCxdnw3OUJ6aAy/zpDWH5t+xIwmG5GtYUYMZqOjvdOkOhWBmus9ptq9znuGsYn8h5vtSjT+w==}
+    dependencies:
+      '@cloudinary/url-gen': 1.10.0
+    dev: false
+
+  /@cloudinary/url-gen@1.10.0:
+    resolution: {integrity: sha512-J3V+gzT6Tepw9bMrR3prWVbW22cIFJtPS8Wkt1WFSZVHWpZx8/vv9ACHaxUmRqaSkjhX8ErsuzDY5YxdWnaCbw==}
+    dependencies:
+      '@cloudinary/transformation-builder-sdk': 1.2.7
     dev: false
 
   /@emotion/babel-plugin@11.10.6:
@@ -1038,6 +1067,11 @@ packages:
 
   /damerau-levenshtein@1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
+    dev: false
+
+  /date-fns@2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug@3.2.7:
@@ -2389,6 +2423,19 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       uuid: 8.3.2
+    dev: false
+
+  /next-cloudinary@4.3.0(next@13.3.0)(react@18.2.0):
+    resolution: {integrity: sha512-nf2CzTUUoPZFGiIZ8zdbxlmnKfI8GJDcGin+uKvkC8RAVszdPIc26YhaOS6rz4oMc1EZg8R3BT7EMiLJC7bOzw==}
+    peerDependencies:
+      next: ^12 || ^13
+      react: ^17 || ^18
+    dependencies:
+      '@cloudinary-util/url-loader': 3.1.1
+      '@cloudinary-util/util': 2.0.1
+      '@cloudinary/url-gen': 1.10.0
+      next: 13.3.0(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
     dev: false
 
   /next@13.3.0(react-dom@18.2.0)(react@18.2.0):
